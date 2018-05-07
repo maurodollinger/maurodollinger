@@ -1,0 +1,40 @@
+// Mixins
+// --------------------------------------------------
+
+// Utilities
+@import "assets/css/vendors/bootstrap/mixins/hide-text";
+@import "assets/css/vendors/bootstrap/mixins/opacity";
+@import "assets/css/vendors/bootstrap/mixins/image";
+@import "assets/css/vendors/bootstrap/mixins/labels";
+@import "assets/css/vendors/bootstrap/mixins/reset-filter";
+@import "assets/css/vendors/bootstrap/mixins/resize";
+@import "assets/css/vendors/bootstrap/mixins/responsive-visibility";
+@import "assets/css/vendors/bootstrap/mixins/size";
+@import "assets/css/vendors/bootstrap/mixins/tab-focus";
+@import "assets/css/vendors/bootstrap/mixins/reset-text";
+@import "assets/css/vendors/bootstrap/mixins/text-emphasis";
+@import "assets/css/vendors/bootstrap/mixins/text-overflow";
+@import "assets/css/vendors/bootstrap/mixins/vendor-prefixes";
+
+// Components
+@import "assets/css/vendors/bootstrap/mixins/alerts";
+@import "assets/css/vendors/bootstrap/mixins/buttons";
+@import "assets/css/vendors/bootstrap/mixins/panels";
+@import "assets/css/vendors/bootstrap/mixins/pagination";
+@import "assets/css/vendors/bootstrap/mixins/list-group";
+@import "assets/css/vendors/bootstrap/mixins/nav-divider";
+@import "assets/css/vendors/bootstrap/mixins/forms";
+@import "assets/css/vendors/bootstrap/mixins/progress-bar";
+@import "assets/css/vendors/bootstrap/mixins/table-row";
+
+// Skins
+@import "assets/css/vendors/bootstrap/mixins/background-variant";
+@import "assets/css/vendors/bootstrap/mixins/border-radius";
+@import "assets/css/vendors/bootstrap/mixins/gradients";
+
+// Layout
+@import "assets/css/vendors/bootstrap/mixins/clearfix";
+@import "assets/css/vendors/bootstrap/mixins/center-block";
+@import "assets/css/vendors/bootstrap/mixins/nav-vertical-align";
+@import "assets/css/vendors/bootstrap/mixins/grid-framework";
+@import "assets/css/vendors/bootstrap/mixins/grid";

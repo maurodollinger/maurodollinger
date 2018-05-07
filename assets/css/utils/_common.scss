@@ -1,0 +1,27 @@
+.btn_orange{
+	width:145px;
+	height:37px;
+	background-color:$faded-orange;
+	border: 1px solid $white;
+	color:white;
+	@include font-family(Roboto,700);
+	@include font-size(12,13);
+	@include transition(background-color 0.1s);
+	letter-spacing:2px;
+	&:hover,&:focus{
+		background-color:rgba($faded-orange,0.8);
+	}
+}
+.capitalize{
+	text-transform:capitalize;
+}
+
+.container-fluid{
+	padding-left:20px!important;
+	padding-right:20px!important;
+}
+
+.h5, h5 {
+    font-size: 14px;
+    text-align: center !important;
+}

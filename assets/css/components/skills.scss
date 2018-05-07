@@ -1,0 +1,10 @@
+#skills{
+	color:white;
+
+	.box-skills{
+		width:50%;
+		float:left;
+		@include flexbox;
+		@include flex-direction(column);
+	}
+}

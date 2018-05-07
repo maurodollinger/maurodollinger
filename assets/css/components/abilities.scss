@@ -1,0 +1,13 @@
+#abilities{
+	color:white;
+
+	.box-abilities{
+		@include flexbox;
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		@include justify-content(center);
+		.ability{
+			width:33%;
+		}
+	}
+}

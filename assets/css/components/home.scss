@@ -1,0 +1,57 @@
+body{
+	background-color:#31342c;
+}
+
+#top-home{
+	position:relative;
+	width:100%;
+	height:50vh;
+	color:#fff;
+
+//	font-family: 'Quicksand', sans-serif;
+//	@include gradient(#009455,#77fab2);
+	padding:30px 0;
+
+	background-image:url('~/assets/img/background-h.jpg');
+	background-size:cover;
+	background-position-y:30%;
+
+	.container{
+		height:100%;
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(center);
+		@include flex-direction(column);
+	}
+
+}
+#sub-home{
+    background-color: #313390;
+	color:white;
+	.container{
+		padding: 3% 10%;
+	}
+}
+.gradient-background{
+	position:absolute;
+	top:0;
+	width:100%;
+	height:50vh;
+	@include gradient(#FFF,#FFF);
+	opacity: 0.2;
+    filter: alpha(opacity=20);
+    z-index:0;
+}
+.title{
+	margin:0;
+	span{
+		@include font-size(60,70);
+	}
+	@include font-size(40,50);
+}
+.subtitle{
+	@include font-size(24,24);
+	font-family: 'EB Garamond', sans-serif;
+	font-style:italic;
+	letter-spacing: 0.5px;
+}
