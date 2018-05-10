@@ -7,4 +7,22 @@
 		@include flexbox;
 		@include flex-direction(column);
 	}
+	.skill{
+		@include flexbox;
+		@include justify-content(space-between);
+		text-align:left;
+		padding:0 20%;
+		height:30px;
+		.skill-range{
+			width:10px;
+			height:12px;
+			background-color:white;
+		}
+		.skill-back{
+			margin:2px 0 0 5px;
+			height:12px;
+			width:100px;
+			background-color:moccasin;
+		}
+	}
 }

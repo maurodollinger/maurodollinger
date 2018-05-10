@@ -8,6 +8,13 @@
 		@include justify-content(center);
 		.ability{
 			width:33%;
+			.ability-circle{
+				width:100px;
+				height:100px;
+				@include border-radius(100px);
+				margin:0 auto;
+				background-color:moccasin;
+			}
 		}
 	}
 }

@@ -30,13 +30,17 @@
         <div class="box-skills">
           <div class="skill" v-for="skill in skillsLeft">
             <div class="skill-name">{{skill.name}}</div>
-            <div class="skill-range">{{skill.range}}</div>
+            <div class="skill-back">
+              <div class="skill-range" :style="{width:(skill.range*10) + 'px'}"></div>
+            </div>
           </div>
         </div>
         <div class="box-skills">
           <div class="skill" v-for="skill in skillsRight">
             <div class="skill-name">{{skill.name}}</div>
-            <div class="skill-range">{{skill.range}}</div>
+            <div class="skill-back">
+              <div class="skill-range" :style="{width:(skill.range*10) + 'px'}"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +53,7 @@
         <div class="box-abilities">
           <div class="ability" v-for="ability in abilities">
             <div class="ability-name">{{ability.name}}</div>
+            <div class="ability-circle"></div>
             <div class="ability-desc">{{ability.desc}}</div>
           </div>
         </div>
