@@ -12,6 +12,3 @@
 		name:'Footer'
 	}
 </script>
-
-
-Hola yo soy Mauro dollinger y tengo un  asdsadjasko
