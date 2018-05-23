@@ -7,13 +7,26 @@
 		@include flex-wrap(wrap);
 		@include justify-content(center);
 		.ability{
-			width:33%;
+			//width:33%;
+			@include rem-fallback(padding-top,10);
+			@include rem-fallback(padding-bottom,10);
+			.ability-name{
+				@include font-size(16,18);
+				@include rem-fallback(padding-top,20);
+				@include rem-fallback(padding-bottom,10);
+			}
+			.ability-desc{
+				@include font-size(13,14);
+			}
 			.ability-circle{
-				width:100px;
-				height:100px;
+				width:140px;
+				height:140px;
 				@include border-radius(100px);
+				background-color:$second-color;
 				margin:0 auto;
-				background-color:moccasin;
+				@include flexbox;
+				@include justify-content(center);
+				@include align-items(center);
 			}
 		}
 	}

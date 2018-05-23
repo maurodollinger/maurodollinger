@@ -17,8 +17,8 @@
           <br>
           I'm a freelance creative front-end developer with 5+ years of professional experience, based in Buenos Aires.
         </h1>
-        <a href="">more about me..</a><br>
-        <a href="href://linkedin.com/in/maurodollinger/" title="mauro dollinger linkedIn">Here's my linkedIn profile</a><br>
+        <a href="">More about me..</a><br>
+        <a href="href://linkedin.com/in/maurodollinger/" title="mauro dollinger linkedIn">My linkedIn profile</a><br>
       </div>
       
     </section>
@@ -31,7 +31,7 @@
           <div class="skill" v-for="skill in skillsLeft">
             <div class="skill-name">{{skill.name}}</div>
             <div class="skill-back">
-              <div class="skill-range" :style="{width:(skill.range*10) + 'px'}"></div>
+              <div class="skill-range" :style="{width:(skill.range*10) + '%'}"></div>
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
           <div class="skill" v-for="skill in skillsRight">
             <div class="skill-name">{{skill.name}}</div>
             <div class="skill-back">
-              <div class="skill-range" :style="{width:(skill.range*10) + 'px'}"></div>
+              <div class="skill-range" :style="{width:(skill.range*10) + '%'}"></div>
             </div>
           </div>
         </div>
@@ -51,9 +51,9 @@
         <h3>Abilities</h3>
 
         <div class="box-abilities">
-          <div class="ability" v-for="ability in abilities">
+          <div class="ability col-xs-12 col-sm-6 col-md-4" v-for="ability in abilities">
+            <div class="ability-circle"><img :src="`img/${ability.img}`" :alt="ability.name"></div>
             <div class="ability-name">{{ability.name}}</div>
-            <div class="ability-circle"></div>
             <div class="ability-desc">{{ability.desc}}</div>
           </div>
         </div>
@@ -63,6 +63,21 @@
     <section id="contact">
       <div class="container text-center">
         <h3>Contact</h3>
+
+        <div class="box-contact">
+          <div class="col-xs-12">
+            <input type="text" name="name" placeholder="Your Name">  
+          </div>   
+          <div class="col-xs-12">
+            <input type="email" name="email" placeholder="Your Email">
+          </div>
+          <div class="col-xs-12">
+            <textarea name="comment" placeholder="Leave a message.."></textarea>
+          </div>
+          <div class="col-xs-12">
+            <input type="submit" name="" value="Submit your message">
+          </div>  
+        </div>
       </div>
     </section>
   </div>
@@ -94,12 +109,12 @@ export default {
         {name:'Illustrator',range:8},
       ],
       abilities:[
-        {name:'Responsive Layout',desc:'Visible for multiple devices'},
-        {name:'Pixel Perfect Code',desc:''},
-        {name:'Dynamic Animations',desc:'Suit transitions and cool effects'},
-        {name:'Semantic',desc:'Taking advantage of HTML5 power'},
-        {name:'Fast',desc:'Optimized, compressed, clean'},
-        {name:'Cross-Browsing',desc:''}
+        {name:'Responsive',desc:'Scalable on multiple devices',img:'responsive.png'},
+        {name:'Dynamic Animations',desc:'Suit transitions and cool effects',img:'animations.png'},
+        {name:'Cross-Browsing',desc:'Visible on top browsers',img:'crossbrowsing.png'},
+        {name:'Fast',desc:'Optimized code, compressed, clean',img:'fast.png'},
+        {name:'Pixel Perfect Code',desc:'Designs well represented',img:'pixelperfect.png'},
+        {name:'Semantic',desc:'Taking advantage of HTML5 power',img:'semantic.png'}
       ]
     }
   }

@@ -1,0 +1,7 @@
+footer{
+	margin-top:4%;
+	background-color:black;
+	@include rem-fallback(height,200);
+	padding:3%;
+	color:#eee;
+}

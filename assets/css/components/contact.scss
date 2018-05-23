@@ -1,3 +1,28 @@
 #contact{
 	color:white;
+	.box-contact{
+		input,textarea{
+			color:black;
+			border:0;
+			@include border-radius(4px);
+			@include font-size(13,14);
+			@include rem-fallback(padding,6);
+			@include rem-fallback(margin,6);
+			
+			outline:white;
+
+			@include respond-to('min-width' ,'small') {
+				width:50%;
+			}
+			@include respond-to('max-width' ,'small') {
+				width:100%;
+			}
+		}
+		input{
+			@include rem-fallback(height,30);
+		}
+		textarea{
+			@include rem-fallback(height,100);
+		}
+	}
 }

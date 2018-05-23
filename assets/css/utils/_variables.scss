@@ -1,0 +1,15 @@
+// GLOBAL BreakPoint
+
+$xsmall-width: 480px;
+$small-width:  767px;
+$medium-width: 991px;
+$handleld-width: 1024px;
+$large-width:  1200px;
+
+$breakpoints: (
+	'xsmall': $xsmall-width,
+	'small':  $small-width,
+	'medium': $medium-width,
+	'handleld': $handleld-width,
+	'large':  $large-width
+) !default;
