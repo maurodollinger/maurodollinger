@@ -29,6 +29,13 @@ body{
 	.vue-typer .custom.caret {
 	  display: none;
 	}
+	img{
+		&.in-viewport{
+			@include animation-ease($myBezier);
+			@include fade-in-up(0.5s);
+		}
+		width:150px;
+	}
 }
 #sub-home{
     background-color: #313390;
@@ -86,4 +93,7 @@ section{
 	@include font-size(24,24);
 	font-family: garamondItalic, sans-serif;
 	letter-spacing: 1px;
+	div &{
+		height:24px;
+	}
 }

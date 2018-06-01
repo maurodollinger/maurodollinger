@@ -2,18 +2,20 @@
   <div>  
     <section id="top-home">
       <div class="container text-center">
+        <img src="~/assets/img/MD_web_logo_05.png" alt="MD" v-in-viewport>
         <h1 class="title">
-         Logo
         </h1>
-        <h2 class="subtitle"> 
-          <vue-typer text='Coding and Innovation'></vue-typer>
-        </h2>
+        <div>
+          <h2 class="subtitle"> 
+            <vue-typer text='Coding and Innovation'></vue-typer>
+          </h2>
+        </div>        
       </div>
       <div class="gradient-background"></div>
     </section>
     <section id="sub-home">
       <div class="container text-center">
-         <h1 class="title">
+         <h1 class="title" v-in-viewport>
           <span>Hi!,</span>
           <br>
           I'm a freelance creative front-end developer with 5+ years of professional experience, based in Buenos Aires.
@@ -89,6 +91,7 @@
 </template>
 
 <script>
+
 if (process.browser) {
   var VueTyper = require('vue-typer').VueTyper
 }

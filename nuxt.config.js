@@ -20,7 +20,7 @@ module.exports = {
   css: [
     '@/assets/css/main.scss'
   ],
-  router: { base:'/myweb/'},
+ // router: { base:'/myweb/'},
   /*
   ** Build configuration
   */
