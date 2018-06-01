@@ -2,9 +2,9 @@
 	<header>
 		<nav id="navigation" class="container">
 			<ul>
-				<li><nuxt-link to="/skills">Skills</nuxt-link></li>
-				<li><nuxt-link to="/about">About</nuxt-link></li>
-				<li><nuxt-link to="/about">Contact</nuxt-link></li>
+				<li><a href="#" v-scroll-to="'#skills'">Skills</a></li>
+				<li><a href="#" v-scroll-to="'#abilities'">Ability</a></li>
+				<li><a href="#" v-scroll-to="'#contact'">Contact</a></li>
 			</ul>
 		</nav>
 	</header><!-- /header -->

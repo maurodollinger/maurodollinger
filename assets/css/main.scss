@@ -5,11 +5,16 @@
     font-family: garamondItalic;
     src: url('~assets/fonts/garamond-italic.ttf') format("truetype");
 }
+@font-face {
+    font-family: garamondRegular;
+    src: url('~assets/fonts/garamond-regular.ttf') format("truetype");
+}
 
 @import 'vendors/bootstrap';
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'utils/colors';
+@import 'utils/animations';
 @import 'components/home';
 @import 'components/skills';
 @import 'components/abilities';

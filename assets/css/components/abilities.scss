@@ -8,6 +8,9 @@
 		@include justify-content(center);
 		.ability{
 			//width:33%;
+			
+			font-family: garamondRegular, sans-serif;
+			letter-spacing: 1px;
 			@include rem-fallback(padding-top,10);
 			@include rem-fallback(padding-bottom,10);
 			.ability-name{
@@ -30,6 +33,11 @@
 				img{
 					width:85%;
 				}
+			}
+
+			&.in-viewport{
+				@include animation-ease($myBezier);
+				@include fade-in-up(0.5s);
 			}
 		}
 	}

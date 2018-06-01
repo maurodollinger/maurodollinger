@@ -24,6 +24,7 @@ module.exports = {
   /*
   ** Build configuration
   */
+  plugins: ['~plugins/vue-scrollto.js','~plugins/vue-in-viewport-directive.js'],
   build: {
     /*
     ** Run ESLint on save

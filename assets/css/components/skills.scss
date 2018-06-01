@@ -2,20 +2,33 @@
 	color:white;
 
 	.box-skills{
-		//width:50%;
-		//float:left;
+		@include respond-to('min-width' ,'small') {
+			width:50%;
+			float:left;
+		}
+		@include respond-to('max-width' ,'small') {
+			width:100%;
+		}
 		@include flexbox;
 		@include flex-direction(column);
 	}
 	.skill{
 		@include flexbox;
-		//@include justify-content(space-between);
+		@include justify-content(flex-start);
+		@include align-items(center);
 		text-align:left;
-		//padding:0 20%;
-		height:30px;
+		padding:0 20%;
+		height:36px;
+		.skill-name{
+			@include font-size(14,20);
+			font-family: garamondRegular, sans-serif;
+			letter-spacing: 1px;
+			opacity:0;
+			@include transition(opacity .3s $myBezier);
+		}
 		.skill-range,.skill-back{
 			@include border-radius(20px);
-			height:15px;
+			height:18px;
 		}
 		.skill-range{
 			width:10px;
@@ -23,8 +36,33 @@
 		}
 		.skill-back{
 			margin:2px 0 0 5px;
-			width:200px;
-			background-color:moccasin;
+			width:0;
+			@include transition(width .3s $myBezier);
+			@include transition-delay(.1s);
+			background-color:darkgray;
+		}
+		&.in-viewport {
+			.skill-back{
+				width:100%;
+			 }
+			.skill-name{
+				opacity:1;
+			}
 		}
 	}
+	.box-info{
+		font-family: garamondItalic, sans-serif;
+		letter-spacing: 1px;
+		@include font-size(19,26);
+		clear:both;
+		@include rem-fallback(padding-top,80);
+		@include rem-fallback(padding-bottom,50);
+		margin:0 15%;
+		border-bottom:1px solid;
+		&.in-viewport{
+			@include animation-ease($myBezier);
+			@include fade-in-up(0.5s);
+		}
+	}
+	
 }

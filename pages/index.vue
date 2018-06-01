@@ -5,7 +5,8 @@
         <h1 class="title">
          Logo
         </h1>
-        <h2 class="subtitle">Coding and Innovation
+        <h2 class="subtitle"> 
+          <vue-typer text='Coding and Innovation'></vue-typer>
         </h2>
       </div>
       <div class="gradient-background"></div>
@@ -16,32 +17,36 @@
           <span>Hi!,</span>
           <br>
           I'm a freelance creative front-end developer with 5+ years of professional experience, based in Buenos Aires.
-        </h1>
-        <a href="">More about me..</a><br>
+        </h1> 
+        <a href="#" v-scroll-to="'#about'">More about me..</a><br>
         <a href="href://linkedin.com/in/maurodollinger/" title="mauro dollinger linkedIn">My linkedIn profile</a><br>
       </div>
       
     </section>
 
-    <section id="skills">
+    <section id="skills" >
       <div class="container text-center">
         <h3>Skills</h3>
 
         <div class="box-skills">
-          <div class="skill" v-for="skill in skillsLeft">
+          <div class="skill" v-for="skill in skillsLeft" v-in-viewport>
+            <div class="skill-name">{{skill.name}}</div>
+            <div class="skill-back" >
+              <div class="skill-range" :style="{width:(skill.range*10) + '%'}"></div>
+            </div>
+          </div>
+        </div>
+        <div class="box-skills">
+          <div class="skill" v-for="skill in skillsRight" v-in-viewport>
             <div class="skill-name">{{skill.name}}</div>
             <div class="skill-back">
               <div class="skill-range" :style="{width:(skill.range*10) + '%'}"></div>
             </div>
           </div>
         </div>
-        <div class="box-skills">
-          <div class="skill" v-for="skill in skillsRight">
-            <div class="skill-name">{{skill.name}}</div>
-            <div class="skill-back">
-              <div class="skill-range" :style="{width:(skill.range*10) + '%'}"></div>
-            </div>
-          </div>
+
+        <div class="box-info" id="about" v-in-viewport>
+          <p>"I have been working on this for more than five years. I began developing games in AS3, then I migrate to HTML5 and JavaScript, and nowadays I’m developing web apps using Vue.JS. My career on the area gave me abilities on scrum and task management. My formal education is diverse. Furthermore of informatics I’ve study art, design and music. These knowledge gave me an analytic, creative and innovator profile. What I like the most of my job is to challenge me to new risks."</p>
         </div>
       </div>
     </section>
@@ -51,7 +56,7 @@
         <h3>Abilities</h3>
 
         <div class="box-abilities">
-          <div class="ability col-xs-12 col-sm-6 col-md-4" v-for="ability in abilities">
+          <div class="ability col-xs-12 col-sm-6 col-md-4" v-for="ability in abilities" v-in-viewport>
             <div class="ability-circle"><img :src="`img/${ability.img}`" :alt="ability.name"></div>
             <div class="ability-name">{{ability.name}}</div>
             <div class="ability-desc">{{ability.desc}}</div>
@@ -84,20 +89,23 @@
 </template>
 
 <script>
-
+if (process.browser) {
+  var VueTyper = require('vue-typer').VueTyper
+}
 export default {
   components: {
+    VueTyper
   },
   data(){
     return{
       skillsLeft:[
-        {name:'Vue',range:7},
-        {name:'React',range:5},
-        {name:'JavaScript',range:8},
+        {name:'HTML5',range:9},
         {name:'Sass',range:8},
         {name:'CSS',range:9},
         {name:'Bootstrap',range:8},
-        {name:'HTML5',range:9},
+        {name:'Vue',range:7},
+        {name:'React',range:5},
+        {name:'JavaScript',range:8}
       ],
       skillsRight:[
         {name:'Flex',range:7},

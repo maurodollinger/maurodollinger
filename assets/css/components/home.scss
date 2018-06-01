@@ -23,15 +23,24 @@ body{
 		@include justify-content(center);
 		@include flex-direction(column);
 	}
-
+	.vue-typer .custom.char.typed {
+	  color: white;
+	}
+	.vue-typer .custom.caret {
+	  display: none;
+	}
 }
 #sub-home{
     background-color: #313390;
 	color:white;
-
+	h1{
+		@include fade-in(.5s)
+	}
 	a{
 		color:white;
 		@include font-size(12,13);
+		font-family: garamondRegular, sans-serif;
+		letter-spacing: 1px;
 	}
 	padding-bottom:2%;
 }
@@ -42,7 +51,6 @@ section{
 	h3{
 		@include font-size(28,30);
 		font-family: garamondItalic, sans-serif;
-		font-style:italic;
 		letter-spacing: 1px;
 		@include rem-fallback(padding-bottom,20);
 	}
@@ -77,6 +85,5 @@ section{
 .subtitle{
 	@include font-size(24,24);
 	font-family: garamondItalic, sans-serif;
-	font-style:italic;
 	letter-spacing: 1px;
 }
