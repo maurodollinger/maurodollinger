@@ -71,20 +71,23 @@
       <div class="container text-center">
         <h3>Contact</h3>
 
-        <div class="box-contact">
-          <div class="col-xs-12">
-            <input type="text" name="name" placeholder="Your Name">  
-          </div>   
-          <div class="col-xs-12">
-            <input type="email" name="email" placeholder="Your Email">
+        <form name="contact" action="" method="post" accept-charset="utf-8" netlify>
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="box-contact">
+            <div class="col-xs-12">
+              <input type="text" name="name" placeholder="Your Name">  
+            </div>   
+            <div class="col-xs-12">
+              <input type="email" name="email" placeholder="Your Email">
+            </div>
+            <div class="col-xs-12">
+              <textarea name="comment" placeholder="Leave a message.."></textarea>
+            </div>
+            <div class="col-xs-12">
+              <input type="submit" name="" value="Submit your message">
+            </div>  
           </div>
-          <div class="col-xs-12">
-            <textarea name="comment" placeholder="Leave a message.."></textarea>
-          </div>
-          <div class="col-xs-12">
-            <input type="submit" name="" value="Submit your message">
-          </div>  
-        </div>
+        </form>
       </div>
     </section>
   </div>
